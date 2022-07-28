@@ -166,6 +166,7 @@ client.on('message', async msg => {
     client.sendMessage(msg.from, '\nAguarde só um momento! 😁');
   }
   //******************fim do menu sistemas */
+  
 
 });
 
