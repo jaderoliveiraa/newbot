@@ -1,0 +1,22 @@
+2022/07/28-13:02:51.012 2c44 Reusing MANIFEST D:\dev\newbot\.wwebjs_auth\session-bot-zdg-server\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/07/28-13:02:51.013 2c44 Recovering log #1099
+2022/07/28-13:02:51.203 2c44 Reusing old log D:\dev\newbot\.wwebjs_auth\session-bot-zdg-server\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/001099.log 
+2022/07/28-13:16:13.380 4f4 Level-0 table #1109: started
+2022/07/28-13:16:13.698 4f4 Level-0 table #1109: 1270601 bytes OK
+2022/07/28-13:16:13.745 4f4 Delete type=0 #1099
+2022/07/28-13:18:51.167 2c40 Compacting 1@1 + 6@2 files
+2022/07/28-13:18:51.611 2c40 Generated table #1110@1: 30773 keys, 2254651 bytes
+2022/07/28-13:18:52.054 2c40 Generated table #1111@1: 37895 keys, 2270411 bytes
+2022/07/28-13:18:52.403 2c40 Generated table #1112@1: 34856 keys, 2211556 bytes
+2022/07/28-13:18:52.612 2c40 Generated table #1113@1: 6488 keys, 2152139 bytes
+2022/07/28-13:18:52.954 2c40 Generated table #1114@1: 33174 keys, 2207958 bytes
+2022/07/28-13:18:53.201 2c40 Generated table #1115@1: 66491 keys, 1466386 bytes
+2022/07/28-13:18:53.201 2c40 Compacted 1@1 + 6@2 files => 12563101 bytes
+2022/07/28-13:18:53.264 2c40 compacted to: files[ 0 0 6 0 0 0 0 ]
+2022/07/28-13:18:53.265 2c40 Delete type=2 #1101
+2022/07/28-13:18:53.265 2c40 Delete type=2 #1102
+2022/07/28-13:18:53.265 2c40 Delete type=2 #1103
+2022/07/28-13:18:53.265 2c40 Delete type=2 #1104
+2022/07/28-13:18:53.265 2c40 Delete type=2 #1105
+2022/07/28-13:18:53.265 2c40 Delete type=2 #1106
+2022/07/28-13:18:53.265 2c40 Delete type=2 #1109
