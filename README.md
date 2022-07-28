@@ -1,7 +1,15 @@
 # newbot
 Adaptado do https://github.com/pedroslopez/whatsapp-web.js do pedro lopez e do zap das galaxias do pedrinho da nasa
 
-basta clonar o git em seguida rodar o npm install, fazer as adaptações de acordo com sua realidade e rodar com o comando node jader_bot.js
-abrir o navegador no localhost:8000 e escanear o qrcode
+1- Instale o node
+2- Instale o gitcmd
+3- Abra o gitcmd e rode o comando git clone https://github.com/jaderoliveiraa/newbot.git
+4- npm install
+5- npm install nodemon -g
+6- nodemon jader_bot.js
+7- Abra o navegador e acesse localhost:8000
+8- Escaneie o QRCode
+9- edite o arquivo jader_bot.js conforme sua realidade
 
-Obs: aconselho rodar o comando npm install -g nodemon e rodar o bot com o comando nodemon jader_bot.js , assim quando você fizer qualquer alteração ele reinicia o server automaticamente
+DÚVIDAS?
+Whatsapp: Fale com Jáder Oliveiraa - (88)988420622 (ATENÇÃO, SUPORTE PAGO).
