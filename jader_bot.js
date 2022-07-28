@@ -94,12 +94,12 @@ client.on('message', async msg => {
   const mediaPath3 = MessageMedia.fromFilePath('./img/testar.png');
   const button = new Buttons('Button body', [{ body: 'bt1' }, { body: 'bt2' }, { body: 'bt3' }], 'title', 'footer');
 
-
+  //********************** Menu Inicial *******************************************//
   if (msg.body === 'oi' || msg.body === 'Oi' || msg.body === 'olá' || msg.body === 'Olá' || msg.body === 'Ola' || msg.body === 'ola' || msg.body === 'menu' || msg.body === 'Menu' || msg.body === 'MENU' || msg.body === 'Inicio') {
-    let sections = [{ title: 'Escolha uma das opções abaixo!', rows: [{ title: 'IPTV', description: '' }, { title: 'Sistemas ou Lojas Virtuais', description: '' }, { title: 'Outros Assuntos', description: '' }] }];
+    let sections = [{ title: 'Escolha uma das opções abaixo!', rows: [{ title: 'IPTV', description: '' }, { title: 'Sistemas ou Lojas Virtuais', description: '' }, { title: 'Falar com o atendente', description: '' }] }];
     let list = new List('Clique no botão abaixo:', 'Opções', sections, 'Olá, Eu sou Jáder Oliveira. \n\nO atendimento é iniciado virtualmente.\n', '© Jáder desenvolvedor');
     client.sendMessage(msg.from, list);
-    //***************************INÍCIO IPTV********************************
+    //***************************Menu de Iptv********************************
   } else if (msg.body === 'iptv' || msg.body === 'Iptv' || msg.body === 'IPTV') {
     let sections = [{ title: 'Escolha uma das opções abaixo!', rows: [{ title: 'Informações', description: '' }, { title: 'Testar', description: '' }, { title: 'Assinar', description: '' }, { title: 'Renovar', description: '' }, { title: 'Suporte', description: '' }] }];
     let list = new List('e escolha uma das opções:', 'Opções', sections, '*Você escolheu IPTV.* \n\nClique no botão de opções\n', '© Jáder desenvolvedor');
@@ -160,11 +160,12 @@ client.on('message', async msg => {
   if (msg.body === 'Site'){
     client.sendMessage(msg.from, 'Com um site, a sua empresa ficará disponível para os seus clientes, online 24hs por dia, 7 dias por semana!\nAssim seu cliente poderá visualizar seu catálogo de produtos ou serviços sempre que precisar');
     client.sendMessage(msg.from, '\nAguarde um momento enquanto transfiro para um humano e ele lhe passará maiores informações! 😁');
-  }
-  if (msg.body === 'Suporte'){
+  }//menu suporte e menu falar com atendente
+  if (msg.body === 'Suporte' || msg.body === 'Falar com o atendente'){
     client.sendMessage(msg.from, 'Vou lhe encaminhar a um humano, mas seria bom se você pudesse ir adiantando qual é o problema, pode ser?');
     client.sendMessage(msg.from, '\nAguarde só um momento! 😁');
   }
+  //******************fim do menu sistemas */
 
 });
 

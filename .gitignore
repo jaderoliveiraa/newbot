@@ -10803,4 +10803,25 @@ node_modules/yocto-queue/readme.md
 .wwebjs_auth/session-bot-zdg-server/Default/Session Storage/LOG
 .wwebjs_auth/session-bot-zdg-server/Default/Session Storage/LOG.old
 .wwebjs_auth/session-bot-zdg-server/DevToolsActivePort
-.wwebjs_auth/*
+.wwebjs_auth/*.*
+.wwebjs_auth/session-bot-zdg-server/Default/chrome_debug.log
+.wwebjs_auth/session-bot-zdg-server/Default/Cookies
+.wwebjs_auth/session-bot-zdg-server/Default/File System/Origins/LOG
+.wwebjs_auth/session-bot-zdg-server/Default/File System/Origins/LOG.old
+.wwebjs_auth/session-bot-zdg-server/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/LOG
+.wwebjs_auth/session-bot-zdg-server/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/LOG.old
+.wwebjs_auth/session-bot-zdg-server/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+.wwebjs_auth/session-bot-zdg-server/Default/Local Storage/leveldb/000013.log
+.wwebjs_auth/session-bot-zdg-server/Default/Local Storage/leveldb/LOG
+.wwebjs_auth/session-bot-zdg-server/Default/Local Storage/leveldb/LOG.old
+.wwebjs_auth/session-bot-zdg-server/Default/Platform Notifications/LOG
+.wwebjs_auth/session-bot-zdg-server/Default/Platform Notifications/LOG.old
+.wwebjs_auth/session-bot-zdg-server/Default/QuotaManager
+.wwebjs_auth/session-bot-zdg-server/Default/QuotaManager-journal
+.wwebjs_auth/session-bot-zdg-server/Default/Service Worker/Database/000003.log
+.wwebjs_auth/session-bot-zdg-server/Default/Service Worker/Database/LOG
+.wwebjs_auth/session-bot-zdg-server/Default/Service Worker/Database/LOG.old
+.wwebjs_auth/session-bot-zdg-server/Default/Session Storage/000003.log
+.wwebjs_auth/session-bot-zdg-server/Default/Session Storage/LOG
+.wwebjs_auth/session-bot-zdg-server/Default/Session Storage/LOG.old
+.wwebjs_auth/session-bot-zdg-server/DevToolsActivePort
