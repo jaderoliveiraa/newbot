@@ -9,7 +9,9 @@ Adaptado do [Pedro Lopez](https://github.com/pedroslopez/whatsapp-web.js) e do [
 6- nodemon jader_bot.js<br>
 7- Abra o navegador e acesse localhost:8000<br>
 8- Escaneie o QRCode<br>
-9- edite o arquivo jader_bot.js conforme sua realidade<br>
+9- edite o arquivo jader_bot.js conforme sua realidade<br><br>
+
+Obs: caso precise instalar no linux, recomendo a versão ubuntu 18
 
 DÚVIDAS?<br><br>
 Whatsapp: Fale com Jáder Oliveiraa - (88)988420622 (ATENÇÃO, SUPORTE PAGO).
