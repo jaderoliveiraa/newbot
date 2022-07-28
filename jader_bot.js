@@ -161,6 +161,10 @@ client.on('message', async msg => {
     client.sendMessage(msg.from, 'Com um site, a sua empresa ficará disponível para os seus clientes, online 24hs por dia, 7 dias por semana!\nAssim seu cliente poderá visualizar seu catálogo de produtos ou serviços sempre que precisar');
     client.sendMessage(msg.from, '\nAguarde um momento enquanto transfiro para um humano e ele lhe passará maiores informações! 😁');
   }
+  if (msg.body === 'Suporte'){
+    client.sendMessage(msg.from, 'Vou lhe encaminhar a um humano, mas seria bom se você pudesse ir adiantando qual é o problema, pode ser?');
+    client.sendMessage(msg.from, '\nAguarde só um momento! 😁');
+  }
 
 });
 
