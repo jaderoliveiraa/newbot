@@ -145,12 +145,20 @@ client.on('message', async msg => {
 
   //**************Inicio do menu sistemas**************//
   if (msg.body.includes('Sistemas ou Lojas Virtuais')) {
-    let sections = [{title: 'Escolha uma das opções abaixo!', rows: [{title: 'Loja Virtual', description: ''}, {title: 'Site', description: ''}, {title: 'Sistema', description: ''},]}]
+    let sections = [{title: 'Escolha uma das opções abaixo!', rows: [{title: 'Loja Virtual', description: ''}, {title: 'Site', description: ''}, {title: 'Sistema', description: ''}, {title: 'Suporte', description: ''}]}]
     let list = new List('Escolha uma opção clicando no botão abaixo:', 'Opções', sections, '*Sistemas ou Lojas Virtuais* \n\nSobre o que você deseja falar?\n', '© Jáder desenvolvedor');
     client.sendMessage(msg.from, list);
   }
   if (msg.body === 'Sistema'){
     client.sendMessage(msg.from, 'Nós temos um sistema de Ordens de serviços e vendas chamado SysControl, caso queira um sistema personalizado, posso fazer um orçamento pra você.');
+    client.sendMessage(msg.from, '\nAguarde um momento enquanto transfiro para um humano e ele lhe passará maiores informações! 😁');
+  }
+  if (msg.body === 'Loja Virtual'){
+    client.sendMessage(msg.from, 'A melhor forma de automatizar sua empresa e alavancar suas vendas, com uma loja virtual, seu cliente pode efetuar a compra e o pagamento direto pela internet e depoisapenas passar para buscar a encomenda, ou, caso você trabalhe com delivery, você poderá apenas fazer a entrega!');
+    client.sendMessage(msg.from, '\nAguarde um momento enquanto transfiro para um humano e ele irá lhe passar maiores informações! 😁');
+  }
+  if (msg.body === 'Site'){
+    client.sendMessage(msg.from, 'Com um site, a sua empresa ficará disponível para os seus clientes, online 24hs por dia, 7 dias por semana!\nAssim seu cliente poderá visualizar seu catálogo de produtos ou serviços sempre que precisar');
     client.sendMessage(msg.from, '\nAguarde um momento enquanto transfiro para um humano e ele lhe passará maiores informações! 😁');
   }
 
