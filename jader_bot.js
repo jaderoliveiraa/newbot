@@ -108,7 +108,7 @@ client.on('message', async msg => {
   //*****Informações*****//
   if (msg.body === 'Informações') {
     client.sendMessage(msg.from, 'Um único aplicativo instalado na sua smart tv, tvbox, celular ou computador, e você tem acesso o *mês inteiro* a mais de 35 mil conteúdos, por *APENAS R$30,00!*');
-    client.sendMessage(msg.from, '\nFaça um teste Inteiramente Grátis agora mesmo!\n\nDigite a palavra *Testar*');
+    client.sendMessage(msg.from, '\nUse Inteiramente Grátis por um período de 4 horas agora mesmo!\n\nDigite a palavra *Testar*');
   }
   //*****fim de informações*****//
   //*****inicio de teste ou assinatura*****//
