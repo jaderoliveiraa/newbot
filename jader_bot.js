@@ -93,16 +93,19 @@ client.on('message', async msg => {
   const mediaPath2 = MessageMedia.fromFilePath('./img/internet.jpeg');
   const mediaPath3 = MessageMedia.fromFilePath('./img/testar.png');
   const button = new Buttons('Button body', [{ body: 'bt1' }, { body: 'bt2' }, { body: 'bt3' }], 'title', 'footer');
-
-  //********************** Menu Inicial *******************************************//
+  let chat = await msg.getChat();
+  if (chat.isGroup) {
+      
+  } else {
+     //********************** Menu Inicial *******************************************//
   if (msg.body === 'oi' || msg.body === 'Oi' || msg.body === 'olá' || msg.body === 'Olá' || msg.body === 'Ola' || msg.body === 'ola' || msg.body === 'menu' || msg.body === 'Menu' || msg.body === 'MENU' || msg.body === 'Inicio') {
-    let sections = [{ title: 'Escolha uma das opções abaixo!', rows: [{ title: 'IPTV', description: '' }, { title: 'Sistemas ou Lojas Virtuais', description: '' }, { title: 'Falar com o atendente', description: '' }] }];
-    let list = new List('Clique no botão abaixo:', 'Opções', sections, 'Olá, Eu sou Jáder Oliveira. \n\nO atendimento é iniciado virtualmente.\n', '© Jáder desenvolvedor');
+    let sections = [{ title: 'Escolha sobre o que você quer falar!', rows: [{ title: 'IPTV', description: '' }, { title: 'Sistemas ou Lojas Virtuais', description: '' }, { title: 'Outros Assuntos', description: '' }] }];
+    let list = new List('⬇️⬇️⬇️ Clique no botão abaixo ⬇️⬇️⬇️', 'MENU PRINCIPAL', sections, 'Olá, Eu sou Jáder Oliveira. \n\nO atendimento é iniciado virtualmente.\n', '© Jáder desenvolvedor');
     client.sendMessage(msg.from, list);
     //***************************Menu de Iptv********************************
   } else if (msg.body === 'iptv' || msg.body === 'Iptv' || msg.body === 'IPTV') {
-    let sections = [{ title: 'Escolha uma das opções abaixo!', rows: [{ title: 'Informações', description: '' }, { title: 'Testar', description: '' }, { title: 'Assinar', description: '' }, { title: 'Renovar', description: '' }, { title: 'Suporte', description: '' }] }];
-    let list = new List('e escolha uma das opções:', 'Opções', sections, '*Você escolheu IPTV.* \n\nClique no botão de opções\n', '© Jáder desenvolvedor');
+    let sections = [{ title: 'Escolha sobre o que você quer falar!', rows: [{ title: 'Informações', description: '' }, { title: 'Testar', description: '' }, { title: 'Assinar', description: '' }, { title: 'Renovar', description: '' }, { title: 'SUPORTE', description: '' }, { title: 'Falar com o atendente', description: '' }] }];
+    let list = new List('⬇️⬇️⬇️ Clicando no Botão abaixo ⬇️⬇️⬇️ ', 'SOBRE IPTV', sections, '*Entendi que você quer falar sobre IPTV.* \n\nEscolha uma das opções\n', '© Jáder desenvolvedor');
     client.sendMessage(msg.from, list);
   }
   //*****Informações*****//
@@ -112,19 +115,30 @@ client.on('message', async msg => {
   }
   //*****fim de informações*****//
   //*****inicio de teste ou assinatura*****//
-  //testar
-  if (msg.body.includes('Testar')) {
-    client.sendMessage(msg.from, 'Blz, mas antes de gerar o teste, preciso ver como está a qualidade de conexão com sua internet. \n\nNo seu celular, baixe o aplicativo *Brasil banda larga*, instale, depois de dar todas as permissões, você clica em Iniciar, tira um print do resultado e manda pra mim.');
-  }//assinar
+  //****************MENU testar***************************//
+  if (msg.body === 'Testar') {
+    client.sendMessage(msg.from, 'É Importante você entender que o servidor funciona bem, mas depende da QUALIDADE de sua conxão com a internet não apenas da velocidade.');
+    client.sendMessage(msg.from, 'Você pode testar a qualidade do sinal de internet, baixando no seu celular, o aplicativo *BRASIL BANDA LARGA*, instala, abra, dê todas as permissões que ele vai pedir, depois clique em *INICIAR*.');
+    let sections = [{ title: 'Escolha o tipo de teste!', rows: [{ title: 'Testar IPTV', description: '' }, { title: 'Testar P2P', description: '' }, { title: 'Assinar', description: '' }] }];
+    let list = new List('⬇️⬇️⬇️ Clique no Botão abaixo ⬇️⬇️⬇️ ', 'CLIQUE AQUI', sections, '*Menu - Teste de TV.* \n\nIPTV é para Smart TVs, Celulares, Computadores e TVBOX.\nP2p funciona apenas em Android TV ou celulares com Android\n', '© Jáder desenvolvedor');
+    client.sendMessage(msg.from, list);
+  }
+  //testar iptv ou p2p
+  if (msg.body === 'Testar IPTV' || msg.body === 'Testar P2P') {
+    client.sendMessage(msg.from, 'Vou lhe encaminhar a um humano, Aguarde só um pouquinho, blz?');
+  }
+  //assinar
   if (msg.body.includes('Assinar')) {
     client.sendMessage(msg.from, 'Legal 😁!\nPra eu conseguir efetivar sua conta, preciso que você faça um PIX com o valor combinado para: \n\n*pixparajader@gmail.com* \n\nou \n\n*88988420622* \n\nEm seguida você me envia o comprovante e já já libero o seu usuário!');
-  }//renovar
+  }
+  //renovar
   if (msg.body.includes('Renovar')) {
     client.sendMessage(msg.from, 'Opa, beleza!\nManda pra mim ai por favor, seu usuário, dai você faz um pix para:\n\n*88988420622*\n\nou\n\n*pixparajader@gmail.com*\n\nDepois você me envia o comprovante por aqui e já já eu renovo seu acesso! 😊');
-  }//***fim de teste ou assinatura***//
+  }
+  //***fim de teste ou assinatura***//
 
   //*****suporte*****//
-  else if (msg.body.includes('Suporte') || msg.body.includes('suporte') || msg.body.includes('SUPORTE')) {
+  else if (msg.body.includes('SUPORTE')) {
     let sections = [{ title: 'Escolha uma das opções abaixo!', rows: [{ title: 'Travando', description: '' }, { title: 'Esqueci meu usuário', description: '' }, { title: 'Não Abre', description: '' }] }];
     let list = new List('Escolha uma opção clicando no botão abaixo:', 'Opções', sections, '*Suporte Técnico - Vamos lá.* \n\nMe diga o que está acontecendo?\n', '© Jáder desenvolvedor');
     client.sendMessage(msg.from, list);
@@ -160,12 +174,22 @@ client.on('message', async msg => {
   if (msg.body === 'Site'){
     client.sendMessage(msg.from, 'Com um site, a sua empresa ficará disponível para os seus clientes, online 24hs por dia, 7 dias por semana!\nAssim seu cliente poderá visualizar seu catálogo de produtos ou serviços sempre que precisar');
     client.sendMessage(msg.from, '\nAguarde um momento enquanto transfiro para um humano e ele lhe passará maiores informações! 😁');
-  }//menu suporte e menu falar com atendente
+    client.sendMessage(msg.from, '\nAh, nosso horário de atendimento é de segunda a sexta das 08:00 às 17:30hs, então, caso esteja fora desse horario de atendimento, pode ser que demore um pouco pra ser atendido, tudo bem? 😁');
+  }
+  //Outros
+  if (msg.body === 'Outros Assuntos' || msg.body === 'outros' || msg.body === 'Outro' || msg.body === 'outro'){
+    client.sendMessage(msg.from, 'Vou lhe encaminhar a um humano, mas seria bom se você pudesse ir adiantando qual é o problema, pode ser?');
+    client.sendMessage(msg.from, '\nAguarde só um momento! 😁\nAh, nosso horário de atendimento é de segunda a sexta das 08:00 às 17:30hs, então, caso esteja fora desse horario de atendimento, pode ser que demore um pouco pra ser atendido, tudo bem? ');
+  }
+  //menu suporte e menu falar com atendente
   if (msg.body === 'Suporte' || msg.body === 'Falar com o atendente'){
     client.sendMessage(msg.from, 'Vou lhe encaminhar a um humano, mas seria bom se você pudesse ir adiantando qual é o problema, pode ser?');
-    client.sendMessage(msg.from, '\nAguarde só um momento! 😁');
+    client.sendMessage(msg.from, '\nAguarde só um momento! 😁 \nAh, nosso horário de atendimento é de segunda a sexta das 08:00 às 17:30hs, então, caso esteja fora desse horario de atendimento, pode ser que demore um pouco pra ser atendido, tudo bem?');
   }
-  //******************fim do menu sistemas */
+  //******************fim do menu sistemas */ 
+  }
+
+  
   
 
 });
